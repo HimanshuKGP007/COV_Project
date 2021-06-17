@@ -36,9 +36,12 @@ SPECTROGRAM_FILE = os.path.join(RECORDING_DIR, "spectrogram.png")
 CLASSES = ['a', 'am', 'bm', 'c', 'd', 'dm', 'e', 'em', 'f', 'g']
 CLASSES_MAP = {'a':0, 'am':1, 'bm':2, 'c':3, 'd':4, 'dm':5, 'e':6, 'em':7, 'f':8, 'g':9}
 
+# CLASSES = ['COVID +ve', 'Healthy']
+# CLASSES_MAP = {'COVID +ve':0, 'Healthy':1}
+
 # Audio configurations
 INPUT_DEVICE = 0
 MAX_INPUT_CHANNELS = 1  # Max input channels
 DEFAULT_SAMPLE_RATE = 44100   # Default sample rate of microphone or recording device
-DURATION = 3   # 3 seconds
+DURATION = 6   # 5 seconds
 CHUNK_SIZE = 1024

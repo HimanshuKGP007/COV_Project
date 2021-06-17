@@ -37,6 +37,7 @@ def display(spectrogram, format):
     plt.colorbar(format=format)
     plt.tight_layout()
     st.pyplot(clear_figure=False)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     title = "Guitar Chord Recognition"
