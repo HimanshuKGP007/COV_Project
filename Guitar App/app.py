@@ -40,9 +40,9 @@ def display(spectrogram, format):
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    title = "Guitar Chord Recognition"
+    title = "COVID-19 Detector"
     st.title(title)
-    image = Image.open(os.path.join(IMAGE_DIR, 'app_guitar.jpg'))
+    image = Image.open(os.path.join(IMAGE_DIR, 'app_covid.jpg'))
     st.image(image, use_column_width=True)
 
     if st.button('Record'):
