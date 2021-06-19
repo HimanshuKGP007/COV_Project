@@ -18,6 +18,19 @@ def init_model():
     cnn.load_model()
     return cnn
 
+def get_stacking():
+	# define the base models
+	level0 = list()
+	level0.append(('rfc', RandomForestClassifier(random_state=1234)))
+	level0.append(('logreg', LogisticRegression()))
+	level0.append(('XG Boost', XGBClassifier()))
+	level0.append(('ebm', ExplainableBoostingClassifier(random_state=seed)))
+	level0.append(('clf',DecisionTreeClassifier(criterion="entropy", max_depth=5)))
+	level1 = LogisticRegression()
+	# define the stacking ensemble
+	model = StackingClassifier(estimators=level0, final_estimator=level1, cv=5)
+	return model
+
 def get_spectrogram(type='mel'):
     logger.info("Extracting spectrogram")
     y, sr = librosa.load(WAVE_OUTPUT_FILE, duration=DURATION)
@@ -68,6 +81,19 @@ def main():
         if chord == 'N/A':
             st.write("Please record sound first")
         st.write("\n")
+
+
+    # if st.button('Classify'):
+    #     model = get_stacking()
+    #     with st.spinner("Classifying the chord"):
+    #         chord = model.predict(WAVE_OUTPUT_FILE, False)
+    #     st.success("Classification completed")
+    #     st.write("### The recorded chord is **", chord + "**")
+    #     if chord == 'N/A':
+    #         st.write("Please record sound first")
+    #     st.write("\n")
+
+
 
     # Add a placeholder
     if st.button('Display Spectrogram'):
