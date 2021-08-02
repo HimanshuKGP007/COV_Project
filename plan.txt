@@ -1,0 +1,75 @@
+To Do: 
+
+- Rewrite Abstract 
+- Framework diagram - DONE v1.0
+- Ensemble Model Diagram - flowchart - DONE v1.0
+- Models' summary - Box Result --> Accuracy + Recall/Sensitivity of identifying COVID +ve - DONE
+- ScreenShot/type the equations - DONE
+- Replace cough with cough audio/cough recording
+- Rearrange Sentences in Methodology 
+- Classifier Architectures - DONE
+- Classification Process (Ensemble) flowchart - DONE v1.0
+- MFCC Block diagram ----------------------------------------------------------------- TBD
+- Corresponding Figure for feature explanation - DONE 
+- Figure and Table numbers
+- Add LIME and SHAP explanation - https://interpret.ml/docs/blackbox.html 
+- Save the trained model for future use
+- DSP Chipset Research
+- Websites Accessed Section
+- Research Paper Format - Use Template ----------------------------------------------- TBD
+- Edit Waveform - DONE
+- Cross Validation Writeup ----------------------------------------------------------- TBD
+- Margin Differencec -- *IMP*
+
+
+Optional:
+
+- Plotly ROC Curves
+- Plot the Spectral Features in one Plot 
+- SHAP Explanation
+- Weights and Biases Code *IMP*
+- AUC in Abstract 
+- Naive Bayes Algorithm 
+- Evaluation mechanism, file:///C:/Kgp/CP/Preparation/COVID%20Project/Audio%20Files/Research%20Papers/COVID%20Cough%20Papers/DTree.pdf 
+
+
+Main Talking Points:
+
+- Explainability (XAI)
+- Ensemble Model
+
+
+Doubts:
+- SMOTE explanation required?
+- What else to be written in Abstract
+- Ensemble Model Explanation required?
+- Per Class Metrics
+- Results Box --- Overall/COVID +ve -- Used COVID -- Done
+- Comment on already existing Testing methods
+
+
+APP DEVELOPEMENT:
+
+Plan: 
+Test App:
+1. Record cough audio (RESEARCH) --> 2 ways: Python WAV or Streamlit WAV
+2. MP3/OGG --> WAV
+3. Feature Extraction
+4. Data Scaling (RESEARCH)(CODE) - Found
+5. Passing through Model
+6. Result
+
+
+Guitar App:
+- Model Info
+- Training
+- Classes
+- Data Scaling
+
+
+New Data:
+- EDA
+- SMOTE
+- Model Training
+- Evaluation
+
