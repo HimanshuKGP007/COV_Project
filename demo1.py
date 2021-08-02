@@ -46,11 +46,11 @@ def main():
         st.write("\n")
 
     # Add a placeholder
-    if st.button('Display Spectrogram'):
-        # type = st.radio("Scale of spectrogram:",
-        #                 ('mel', 'DB'))
-        if os.path.exists(WAVE_OUTPUT_FILE):
-            spectrogram, format = get_spectrogram(type='mel')
-            display(spectrogram, format)
-        else:
-            st.write("Please record sound first")
+    # if st.button('Display Spectrogram'):
+    #     # type = st.radio("Scale of spectrogram:",
+    #     #                 ('mel', 'DB'))
+    #     if os.path.exists(WAVE_OUTPUT_FILE):
+    #         spectrogram, format = get_spectrogram(type='mel')
+    #         display(spectrogram, format)
+    #     else:
+    #         st.write("Please record sound first")
