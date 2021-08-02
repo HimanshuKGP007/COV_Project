@@ -73,6 +73,18 @@ from sklearn.preprocessing import MinMaxScaler
 #---------------------------------------------------------------------------------------
 
 df = pd.read_csv(r"Files\smote_no_encode.csv")
+scaler = MinMaxScaler()
+X = scaler.fit_transform(np.array(df.iloc[:, :-1], dtype = float))
+features = ['chroma_stft', 'rmse', 'spectral_centroid', 'spectral_bandwidth',
+       'rolloff', 'zero_crossing_rate', 'mfcc1', 'mfcc2', 'mfcc3', 'mfcc4',
+       'mfcc5', 'mfcc6', 'mfcc7', 'mfcc8', 'mfcc9', 'mfcc10', 'mfcc11',
+       'mfcc12', 'mfcc13', 'mfcc14', 'mfcc15', 'mfcc16', 'mfcc17', 'mfcc18',
+       'mfcc19', 'mfcc20']
+
+X_s = pd.DataFrame(X, columns = features)
+X_s['label'] = df['label']
+
+
 # https://www.kaggle.com/himanshu007121/present-smote-method/edit/run/66970478 
 #---------------------------------------------------------------------------------------
 # 1 - COVID
