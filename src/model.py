@@ -22,16 +22,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LogisticRegression
-from keras.models import Sequential, Model, load_model
-from keras.layers.normalization import BatchNormalization
-from keras.layers import Dense, Dropout, Activation, Flatten
-from keras.layers import Convolution2D, Conv2D, MaxPooling2D, GlobalAveragePooling2D, UpSampling2D, Input
-#from keras.optimizers import Adam
-from keras.utils import np_utils
-from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
-from keras import optimizers
-from keras.regularizers import l1
-from keras.utils.vis_utils import plot_model
+# from keras.models import Sequential, Model, load_model
+# from keras.layers.normalization import BatchNormalization
+# from keras.layers import Dense, Dropout, Activation, Flatten
+# from keras.layers import Convolution2D, Conv2D, MaxPooling2D, GlobalAveragePooling2D, UpSampling2D, Input
+# #from keras.optimizers import Adam
+# from keras.utils import np_utils
+# from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
+# from keras import optimizers
+# from keras.regularizers import l1
+# from keras.utils.vis_utils import plot_model
 from datetime import datetime
 from sklearn import metrics
 import librosa, librosa.display, os, csv
@@ -104,7 +104,7 @@ import datetime
 import tensorflow as tf
 import keras
 import numpy as np
-
+import csv
 from keras.layers import Activation, Dense, Dropout, Conv2D, \
                          Flatten, MaxPooling2D
 from keras.models import Sequential, model_from_json
@@ -267,7 +267,7 @@ class CNN(object):
                 with file:
                     writer = csv.writer(file)
                     writer.writerow(header)
-                for i in range(0):
+                for i in range(1):
                     chroma_stft = librosa.feature.chroma_stft(y=y, sr=sr)
                     rmse = librosa.feature.rms(y=y)
                     spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -282,9 +282,18 @@ class CNN(object):
                     with file:
                         writer = csv.writer(file)
                         writer.writerow(to_append.split())
+                file.close()
                 
                 test = pd.read_csv('test.csv')
-                prediction = loaded_model.predict(test)
+                test_normalised = scaler.transform(test)
+                print(test_normalised) 
+                logger.info("The recorded chord is " + test_normalised)
+                #test_normalised=test_normalised[:,~np.all(np.isnan(d), axis=0)]
+                prediction = loaded_model.predict(test_normalised)
+                class_id = prediction[0]
+                chord = str(CLASSES[class_id])
+                logger.info("The recorded chord is " + chord)    
+            
             
         
         
@@ -292,15 +301,15 @@ class CNN(object):
         
 
                 
-                px = ps
-                px
-                shape = (1,) + self.input_shape
-                ps = np.array(ps.reshape(shape))
-                predictions = self.model.predict_classes(ps)
-                class_id = predictions[0]
-                chord = str(CLASSES[class_id])
-                logger.info("The recorded chord is " + chord)
-            # except:
+            #     px = ps
+            #     px
+            #     shape = (1,) + self.input_shape
+            #     ps = np.array(ps.reshape(shape))
+            #     predictions = self.model.predict_classes(ps)
+            #     class_id = predictions[0]
+            #     chord = str(CLASSES[class_id])
+            #     logger.info("The recorded chord is " + chord)
+            # # except:
                 # logger.info("File note found")
                 # chord = "N/A"
         return chord
