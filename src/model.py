@@ -72,7 +72,7 @@ from sklearn.preprocessing import MinMaxScaler
 #---------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------
 
-df = pd.read_csv(r"Files\smote_no_encode.csv")
+df = pd.read_csv(r"C:\Users\DELL\COV_Project\Files\smote_no_encode.csv")
 scaler = MinMaxScaler()
 X = scaler.fit_transform(np.array(df.iloc[:, :-1], dtype = float))
 features = ['chroma_stft', 'rmse', 'spectral_centroid', 'spectral_bandwidth',
@@ -83,7 +83,13 @@ features = ['chroma_stft', 'rmse', 'spectral_centroid', 'spectral_bandwidth',
 
 X_s = pd.DataFrame(X, columns = features)
 X_s['label'] = df['label']
+#---------------------------------------------------------------------------------------
+#Import model as pickle file
 
+import pickle
+loaded_model = pickle.load(open(r'C:\Users\DELL\COV_Project\models\finalized_model.sav', 'rb'))
+# result = loaded_model.score(X_test, y_test)
+# print(result)
 
 # https://www.kaggle.com/himanshu007121/present-smote-method/edit/run/66970478 
 #---------------------------------------------------------------------------------------
@@ -210,7 +216,10 @@ class CNN(object):
     @staticmethod
     def get_class(self, class_ID):
         return list(CLASSES_MAP.keys())[list(CLASSES_MAP.values()).index(class_ID)]
-
+    
+    
+    
+   
     def save_model(self):
         logger.info('Saving model')
         # serialize model to JSON
@@ -249,8 +258,12 @@ class CNN(object):
                 y, sr = librosa.load(filepath, duration=3)
                 ps = librosa.feature.melspectrogram(y=y, sr=sr)
                 
-                
-                file = open('test_1.csv', 'w')
+                header = 'chroma_stft rmse spectral_centroid spectral_bandwidth rolloff zero_crossing_rate'
+                for i in range(1, 21):
+                        header += f' mfcc{i}'
+                header = header.split()
+
+                file = open('test.csv', 'w')
                 with file:
                     writer = csv.writer(file)
                     writer.writerow(header)
@@ -265,12 +278,14 @@ class CNN(object):
                     to_append = f'{np.mean(chroma_stft)} {np.mean(rmse)} {np.mean(spec_cent)} {np.mean(spec_bw)} {np.mean(rolloff)} {np.mean(zcr)}'
                     for e in mfcc:
                         to_append += f' {np.mean(e)}'
-                    file = open('test_1.csv', 'a')
+                    file = open('test.csv', 'a')
                     with file:
                         writer = csv.writer(file)
                         writer.writerow(to_append.split())
+                
+                test = pd.read_csv('test.csv')
+                prediction = loaded_model.predict(test)
             
-        
         
         
         
