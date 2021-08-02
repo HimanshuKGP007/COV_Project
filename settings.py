@@ -38,8 +38,8 @@ CLASSES_MAP = {'a':0, 'am':1, 'bm':2, 'c':3, 'd':4, 'dm':5, 'e':6, 'em':7, 'f':8
 
 
 # # New Features
-# CLASSES = ['COVID Positive', 'COVID Negative']
-# CLASSES_MAP = {'COVID Positive':0, 'COVID Negative':1}
+# CLASSES = ['COVID Negative', 'COVID Positive']
+# CLASSES_MAP = {'COVID Negative':0, 'COVID Positive':1}
 
 # Audio configurations
 INPUT_DEVICE = 0
