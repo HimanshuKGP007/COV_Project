@@ -1,3 +1,82 @@
+import librosa
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+from PIL import Image
+import pathlib
+import csv
+
+# Preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+
+#Keras
+import keras
+
+import warnings
+warnings.filterwarnings('ignore')
+
+from sklearn.preprocessing import LabelEncoder, scale, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.decomposition import PCA
+from sklearn.linear_model import LogisticRegression
+from keras.models import Sequential, Model, load_model
+from keras.layers.normalization import BatchNormalization
+from keras.layers import Dense, Dropout, Activation, Flatten
+from keras.layers import Convolution2D, Conv2D, MaxPooling2D, GlobalAveragePooling2D, UpSampling2D, Input
+#from keras.optimizers import Adam
+from keras.utils import np_utils
+from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
+from keras import optimizers
+from keras.regularizers import l1
+from keras.utils.vis_utils import plot_model
+from datetime import datetime
+from sklearn import metrics
+import librosa, librosa.display, os, csv
+import pandas as pd
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import pylab
+plt.switch_backend('agg')
+import itertools
+import scipy as sp
+from scipy import signal
+import xgboost as xgb
+import joblib
+from glob import glob
+import urllib
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, Flatten, Dense, MaxPool2D, Dropout
+from tensorflow.keras.utils import to_categorical 
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+
+# Basic Libraries
+
+import pandas as pd
+import numpy as np
+
+pd.plotting.register_matplotlib_converters()
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+from sklearn.model_selection import GridSearchCV
+
+from sklearn.preprocessing import MinMaxScaler
+
+#---------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
+
+
+
+#---------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
+
 import os
 import logging
 import librosa
@@ -20,6 +99,8 @@ from setup_logging import setup_logging
 
 setup_logging()
 logger = logging.getLogger('src.model')
+
+
 
 class LoggingCallback(Callback):
     """Callback that logs message at end of epoch.
@@ -152,7 +233,7 @@ class CNN(object):
         else:
             # try:
                 y, sr = librosa.load(filepath, duration=3)
-                ps = librosa.feature.melspectrogram(y=y, sr=sr,)
+                ps = librosa.feature.melspectrogram(y=y, sr=sr)
                 px = ps
                 px
                 shape = (1,) + self.input_shape

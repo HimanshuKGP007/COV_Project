@@ -36,6 +36,11 @@ SPECTROGRAM_FILE = os.path.join(RECORDING_DIR, "spectrogram.png")
 CLASSES = ['a', 'am', 'bm', 'c', 'd', 'dm', 'e', 'em', 'f', 'g']
 CLASSES_MAP = {'a':0, 'am':1, 'bm':2, 'c':3, 'd':4, 'dm':5, 'e':6, 'em':7, 'f':8, 'g':9}
 
+
+# # New Features
+# CLASSES = ['COVID Positive', 'COVID Negative']
+# CLASSES_MAP = {'COVID Positive':0, 'COVID Negative':1}
+
 # Audio configurations
 INPUT_DEVICE = 0
 MAX_INPUT_CHANNELS = 1  # Max input channels
