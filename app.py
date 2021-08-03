@@ -1,88 +1,69 @@
-import time, os
-import logging
 import streamlit as st
+#from synthesizer.inference import Synthesizer
+#from encoder import inference as encoder
+#from vocoder import inference as vocoder
+from pathlib import Path
 import numpy as np
-import librosa, librosa.display
-import matplotlib.pyplot as plt
-from PIL import Image
-from settings import IMAGE_DIR, DURATION, WAVE_OUTPUT_FILE
-from src.sound import sound
-from src.model import CNN
-from setup_logging import setup_logging
+#import soundfile as sf
+import os
+import librosa
+import glob
+from helper import draw_embed, create_spectrogram, read_audio, record, save_record, preprocess, get_dataframe, scaler_transform
+import pickle
 
-setup_logging()
-logger = logging.getLogger('app')
 
-def init_model():
-    cnn = CNN((128, 87))
-    cnn.load_model()
-    return cnn
+"# COVID-19 Detection using cough recordings"
+model_load_state = st.text("Loading models...")
 
-def get_spectrogram(type='mel'):
-    logger.info("Extracting spectrogram")
-    y, sr = librosa.load(WAVE_OUTPUT_FILE, duration=DURATION)
-    ps = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128)
-    logger.info("Spectrogram Extracted")
-    format = '%+2.0f'
-    if type == 'DB':
-        ps = librosa.power_to_db(ps, ref=np.max)
-        format = ''.join[format, 'DB']
-        logger.info("Converted to DB scale")
-    return ps, format
+loaded_model = pickle.load(open(r'C:\Users\DELL\COVID_app\model\finalized_model.sav', 'rb'))
 
-def display(spectrogram, format):
-    plt.figure(figsize=(10, 4))
-    librosa.display.specshow(spectrogram, y_axis='mel', x_axis='time')
-    plt.title('Mel-frequency spectrogram')
-    plt.colorbar(format=format)
-    plt.tight_layout()
-    st.pyplot(clear_figure=False)
+model_load_state.text("Loaded models!")
 
-def main():
-    title = "Guitar Chord Recognition"
-    st.title(title)
-    image = Image.open(os.path.join(IMAGE_DIR, 'app_guitar.jpg'))
-    st.image(image, use_column_width=True)
+st.header("Record your voice")
 
-    if st.button('Record'):
-        with st.spinner(f'Recording for {DURATION} seconds ....'):
-            sound.record()
-        st.success("Recording completed")
+filename = st.text_input("Choose a filename: ")
 
-    if st.button('Play'):
-        # sound.play()
-        try:
-            audio_file = open(WAVE_OUTPUT_FILE, 'rb')
-            audio_bytes = audio_file.read()
-            st.audio(audio_bytes, format='audio/wav')
-        except:
-            st.write("Please record sound first")
+if st.button(f"Click to Record"):
+    if filename == "":
+        st.warning("Choose a Username.")
+    else:
+        record_state = st.text("Recording...")
+        duration = 5  # seconds
+        fs = 22050
+        myrecording = record(duration, fs)
+        record_state.text(f"Saving sample as {filename}.wav")
 
-    if st.button('Classify'):
-        cnn = init_model()
-        with st.spinner("Classifying the chord"):
-            chord = cnn.predict(WAVE_OUTPUT_FILE, False)
+        path_myrecording = f"./samples/{filename}.wav"
+
+        save_record(path_myrecording, myrecording, fs)
+        record_state.text(f"Done! Saved sample as {filename}.wav")
+
+        st.audio(read_audio(path_myrecording))
+
+        fig = create_spectrogram(path_myrecording)
+        st.pyplot(fig)
+
+if st.button(f'Classify'):
+        cnn = loaded_model
+        path_myrecording = f"./samples/{filename}.wav"
+        with st.spinner("Classifying the cough recording"):
+            retro = preprocess(path_myrecording)
+            retro1 = get_dataframe(retro)
+            retro2 = scaler_transform(retro1)
+
+            chord = cnn.predict(retro2)
         st.success("Classification completed")
-        st.write("### The recorded chord is **", chord + "**")
-        if chord == 'N/A':
-            st.write("Please record sound first")
-        st.write("\n")
-
-    # Add a placeholder
-    if st.button('Display Spectrogram'):
-        # type = st.radio("Scale of spectrogram:",
-        #                 ('mel', 'DB'))
-        if os.path.exists(WAVE_OUTPUT_FILE):
-            spectrogram, format = get_spectrogram(type='mel')
-            display(spectrogram, format)
+        st.header("Test Results:")
+        if chord == [0]:
+            result = "Negative"
         else:
-            st.write("Please record sound first")
+            result = "Positive"
 
-if __name__ == '__main__':
-    main()
-    # for i in range(100):
-    #   # Update the progress bar with each iteration.
-    #   latest_iteration.text(f'Iteration {i+1}')
-    #   bar.progress(i + 1)
-    #   time.sleep(0.1)
+        st.success("{}".format(result))
+        #st.dataframe(chord[0])
+        #st.header()
+        # st.write("### The recorded chord is **", chord + "**")
+        # if chord == 'N/A':
+        #     st.write("Please record sound first")
+        # st.write("\n")
 
