@@ -8,6 +8,8 @@ Test App:
 4. Data Scaling (RESEARCH)(CODE) - Done
 5. Passing through Model
 6. Result -- Review
+6.1 -- Test the App
+6.2 -- https://github.com/AnushkaDwivedi17/Coswara/blob/main/Coswara-Data-Notebook.ipynb - extra data Extraction for Training ans testing
 7. Deploying issues -- Heroku
 
 
@@ -28,10 +30,4 @@ New Data:
 
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
-- Test the App
-- https://github.com/AnushkaDwivedi17/Coswara/blob/main/Coswara-Data-Notebook.ipynb - extra data Extraction for Training ans testing
-- https://github.com/virufy/virufy-cdf-coswara/blob/main/standardize_coswara.ipynb 
-- https://github.com/walzter/SARS-nCOV19-Coswara-Data 
-- https://github.com/KenWuqianghao/Respiratory-Disease-Coughing-Dataset-CNN 
-- https://github.com/ShivangTiwari/Multimodal-Framework-for-Early-and-Accurateof-COVID-19-Using-Deep-MultiModal-LearningTechnique/tree/main/cough%20audio%20classification
-- https://github.com/walzter/COVID_Cough 
+- 
