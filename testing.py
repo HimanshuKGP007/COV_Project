@@ -29,8 +29,8 @@ features = ['chroma_stft', 'rmse', 'spectral_centroid', 'spectral_bandwidth',
        'mfcc5', 'mfcc6', 'mfcc7', 'mfcc8', 'mfcc9', 'mfcc10', 'mfcc11',
        'mfcc12', 'mfcc13', 'mfcc14', 'mfcc15', 'mfcc16', 'mfcc17', 'mfcc18',
        'mfcc19', 'mfcc20']
-path = r'C:\Users\DELL\COV_Project\Files\cough-heavy.wav'
-#path = 'C:\Kgp\CP\Preparation\COVID Project\Audio Files\Mendeley\data\covid\pos-0421-084-cough-m-50.wav'
+#path = r'C:\Users\DELL\COV_Project\Files\cough-heavy.wav'
+path = r'C:\Kgp\CP\Preparation\COVID Project\Audio Files\Mendeley\data\covid\pos-0421-084-cough-m-50.wav'
 
 def preproces(fn_wav):
     y, sr = librosa.load(fn_wav, mono=True, duration=5)
@@ -73,16 +73,24 @@ def scaler_transform(feature):
     test_normalised = scaler.transform(feature)
     return test_normalised
 
-retro = preproces(path)
-retro1 = get_dataframe(retro)
-retro2 = scaler_transform(retro1)
+def to_scaled_feature(path):
+    retro = preproces(path)
+    retro1 = get_dataframe(retro)
+    retro2 = scaler_transform(retro1)
+    return retro2   
 
+retro2 = to_scaled_feature(path)
 import pickle
 loaded_model = pickle.load(open(r'C:\Users\DELL\COVID_app\model\finalized_model.sav', 'rb'))
 
 a = loaded_model.predict(retro2)    
     
 a[0]
+
+
+
+
+
 
 
 
