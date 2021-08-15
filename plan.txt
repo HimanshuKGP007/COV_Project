@@ -13,6 +13,7 @@ Test App:
 
 model.py --> train.py --> test.py
 
+
 Guitar App:
 - Model Info
 - Training
@@ -26,6 +27,7 @@ New Data:
 - Model Training
 - Evaluation
 
+- Work on smote function
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
 - Test the App
