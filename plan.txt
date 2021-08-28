@@ -24,6 +24,7 @@ Guitar App:
 App Developements:
 
 - PyWebIO ---> Serves Streamlit purpose
+- Data for Training App --> https://www.kaggle.com/himanshu007121/coswara-data-extraction 
 - Cloud Audio Recorder - https://imclient.herokuapp.com/audiorecorder/ , https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 - Reference Issue: https://stackoverflow.com/questions/62365299/deploy-django-app-using-pyaudio-library-to-heroku , https://stackoverflow.com/questions/68108052/an-audio-recorder-work-around-that-doesnt-use-portaudio-for-a-streamlit-webapp 
 
@@ -37,7 +38,7 @@ New Data:
 
 PLAN:
 
-- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left
+- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left --> Source: https://www.kaggle.com/himanshu007121/first-wave/ + https://www.kaggle.com/himanshu007121/second-wave-dataset 
 - Cough Detection Model
 - Envelope of coughing sound
 - BTP report - TBD
