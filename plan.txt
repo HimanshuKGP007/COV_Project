@@ -37,9 +37,10 @@ New Data:
 
 PLAN:
 
-- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ?
+- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left
 - Cough Detection Model
 - Envelope of coughing sound
+- BTP report - TBD
 
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
@@ -53,3 +54,6 @@ Extra Links:
 - https://zenodo.org/record/4498364#.YR02xogzaMo -- https://www.kaggle.com/andrewmvd/covid19-cough-audio-classification and https://c4science.ch/diffusion/10770/ , https://www.kaggle.com/himanshu007121/coughvid-dataset -- refer this -- COUGHVID -- More research on codes for COUGHVID Extraction
 - https://www.kaggle.com/praveengovi/coronahack-respiratory-sound-dataset -- COSWARA code trials, https://www.kaggle.com/andrewmvd/covid19-cough-audio-classification/code
 - https://www.kaggle.com/himanshu007121/audio-processing-covid-cough-analysis/edit 
+
+
+- COSWARA data Extraction -- https://www.kaggle.com/himanshu007121/covid-coswara-dataset-extraction --> Final Code: https://www.kaggle.com/himanshu007121/second-wave-dataset
