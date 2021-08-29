@@ -58,3 +58,5 @@ Extra Links:
 
 
 - COSWARA data Extraction -- https://www.kaggle.com/himanshu007121/covid-coswara-dataset-extraction --> Final Code: https://www.kaggle.com/himanshu007121/second-wave-dataset
+
+- https://www.nature.com/articles/s41597-021-00937-4 --> One of the most common symptoms of COVID-19 is a dry cough, which is present in approximately 67.7% of cases5
