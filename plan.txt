@@ -71,3 +71,5 @@ COUGHVID:
 - https://github.com/KenWuqianghao/Respiratory-Disease-Coughing-Dataset-CNN -- DL Method
 - https://github.com/shaunalexex/COVID-19-Cough-Analysis -- IMPORTANT -- SEGMENTATION / MASKING
 - https://github.com/clelf/CS-433-ML_Project2_COUGHVID 
+
+Source: COVID-19 cough audio classification analysis using COUGHVID dataset by Orlandic et al.. (https://www.nature.com/articles/s41597-021-00937-4.pdf)
