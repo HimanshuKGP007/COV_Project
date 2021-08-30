@@ -64,5 +64,10 @@ Extra Links:
 
 COUGHVID:
 
-- https://github.com/The-Bread/Coughvid-Prediction/blob/main/covidPreds.ipynb
+- https://github.com/The-Bread/Coughvid-Prediction/blob/main/covidPreds.ipynb -- DL Method + SMOTE
 -- https://zenodo.org/record/4498364#.YR02xogzaMo -- 1) Write JSON data to CSV
+- https://github.com/codingfabi/COUGHVID/blob/main/Final_Project.ipynb -- For viewing the waveplot
+- https://github.com/Chenpei-git/coughvid_audio_test -- cough quality Detection
+- https://github.com/KenWuqianghao/Respiratory-Disease-Coughing-Dataset-CNN -- DL Method
+- https://github.com/shaunalexex/COVID-19-Cough-Analysis -- IMPORTANT -- SEGMENTATION / MASKING
+- https://github.com/clelf/CS-433-ML_Project2_COUGHVID 
