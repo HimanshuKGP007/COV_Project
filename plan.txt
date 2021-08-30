@@ -62,8 +62,8 @@ Extra Links:
 
 - https://www.nature.com/articles/s41597-021-00937-4 --> One of the most common symptoms of COVID-19 is a dry cough, which is present in approximately 67.7% of cases5
 
-COUGHVID:
 
+COUGHVID:
 - https://github.com/The-Bread/Coughvid-Prediction/blob/main/covidPreds.ipynb -- DL Method + SMOTE
 -- https://zenodo.org/record/4498364#.YR02xogzaMo -- 1) Write JSON data to CSV
 - https://github.com/codingfabi/COUGHVID/blob/main/Final_Project.ipynb -- For viewing the waveplot
