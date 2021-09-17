@@ -29,19 +29,27 @@ App Developements:
 - Reference Issue: https://stackoverflow.com/questions/62365299/deploy-django-app-using-pyaudio-library-to-heroku , https://stackoverflow.com/questions/68108052/an-audio-recorder-work-around-that-doesnt-use-portaudio-for-a-streamlit-webapp 
 
 New Data:
-- EDA
-- SMOTE
-- Model Training
-- Evaluation
+- EDA - DONE
+- SMOTE - DONE
+- Model Training - DONE
+- Evaluation - DONE
 
 - Work on smote function - DONE
 
 PLAN:
 
-- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left --> Source: https://www.kaggle.com/himanshu007121/first-wave/ + https://www.kaggle.com/himanshu007121/second-wave-dataset --> NB: https://www.kaggle.com/himanshu007121/dtale-1 
+- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left --> Source: https://www.kaggle.com/himanshu007121/first-wave/ + https://www.kaggle.com/himanshu007121/second-wave-dataset --> NB: https://www.kaggle.com/himanshu007121/dtale-1 -- DONE
 - Cough Detection Model
-- Envelope of coughing sound
-- BTP report - TBD on Overleaf
+- Envelope of coughing sound -- (Plot)Fourier Transform to find Frequency Range/Bandwidths -- Try to link with Vocal Chords
+- BTP report - TBD on Overleaf, writeup on Grammarly
+  - Documentation of App Developements
+  - Documentation of comparison of waves
+- Research and Datasets on Different diseases -- Compare with COVID (MFCC's) (Look For boxplots in plotly -- samre research as COVID multi waves)
+- classification of waves on the basis of 5 features(DONE) + 
+
+
+
+
 
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
