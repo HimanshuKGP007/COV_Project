@@ -38,10 +38,10 @@ New Data:
 
 PLAN:
 
-- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left --> Source: https://www.kaggle.com/himanshu007121/first-wave/ + https://www.kaggle.com/himanshu007121/second-wave-dataset 
+- EDA of covid metrics for wave 1 and 2 --> Q: Does cough signal/sounds in different signals differ? --> Data ready, EDA left --> Source: https://www.kaggle.com/himanshu007121/first-wave/ + https://www.kaggle.com/himanshu007121/second-wave-dataset --> NB: https://www.kaggle.com/himanshu007121/dtale-1 
 - Cough Detection Model
 - Envelope of coughing sound
-- BTP report - TBD
+- BTP report - TBD on Overleaf
 
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
