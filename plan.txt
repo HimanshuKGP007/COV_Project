@@ -46,8 +46,9 @@ PLAN:
 - BTP report - TBD on Overleaf, writeup on Grammarly
   - Documentation of App Developements -- DONE (atm)
   - Documentation of comparison of waves -- DONE (atm)
-- Research and Datasets on Different diseases -- Compare with COVID (MFCC's) (Look For boxplots in plotly -- samre research as COVID multi waves)
-- classification of waves on the basis of 5 features(DONE) + 
+- Research and Datasets on Different diseases -- Compare with COVID (MFCC's) (Look For boxplots in plotly -- same research as COVID multi waves)
+  - COPD Data Extracted --> https://www.kaggle.com/himanshu007121/copd-covid-similarities 
+- classification of waves on the basis of 5 features(DONE) + other diseases
 
 
 
