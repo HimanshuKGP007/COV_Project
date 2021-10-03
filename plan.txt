@@ -75,6 +75,7 @@ Extra Links:
 
 
 COUGHVID:
+- https://www.kaggle.com/nasrulhakim86/coughvid-wav -- Dataset WAV
 - https://github.com/The-Bread/Coughvid-Prediction/blob/main/covidPreds.ipynb -- DL Method + SMOTE
 -- https://zenodo.org/record/4498364#.YR02xogzaMo -- 1) Write JSON data to CSV
 - https://github.com/codingfabi/COUGHVID/blob/main/Final_Project.ipynb -- For viewing the waveplot
