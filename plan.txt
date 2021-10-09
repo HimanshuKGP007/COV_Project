@@ -42,7 +42,7 @@ PLAN:
   - chroma_Stft very significant --> extract all 8 separately
   - use those 8 to see the importance, find most important octave
 - Cough Detection Model
-- Envelope of coughing sound -- (Plot)Fourier Transform to find Frequency Range/Bandwidths -- Try to link with Vocal Chords
+- Envelope of coughing sound -- (Plot)Fourier Transform to find Frequency Range/Bandwidths -- Try to link with Vocal Chords -- CURRENTLY ONGOING
 - BTP report - TBD on Overleaf, writeup on Grammarly
   - Documentation of App Developements -- DONE (atm)
   - Documentation of comparison of waves -- DONE (atm)
