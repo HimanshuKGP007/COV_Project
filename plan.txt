@@ -61,6 +61,8 @@ PLAN:
 
 Extra Links: 
 - https://iiscleap.github.io/coswara-blog/ -- BTP report
+- https://www.frontiersin.org/articles/10.3389/frobt.2021.580080/full
+- https://www.kaggle.com/himanshu007121/esc-50-trial-cough-detection  
 - Test the App
 - https://github.com/AnushkaDwivedi17/Coswara/blob/main/Coswara-Data-Notebook.ipynb - extra data Extraction for Training and testing
 - https://github.com/virufy/virufy-cdf-coswara/blob/main/standardize_coswara.ipynb 
