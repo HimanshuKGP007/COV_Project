@@ -51,8 +51,13 @@ ONGOING PLAN - OCT 2021:
 
 - Envelope of coughing sound -- (Plot)Fourier Transform to find Frequency Range/Bandwidths 
   - https://www.kaggle.com/himanshu007121/eda-on-the-frequency-domain-fft
-  - Review Notion 
-  - Try to link with Vocal Chords 
+  - Review Notion
+  - https://www.kaggle.com/himanshu007121/testing-spectral-comparison-techniques  
+  - Initial Idea: 
+1. Extract FFT Values from all the voice recordings
+2. Extract associated frequencies from these FFT coefficients 
+3. The FFT coefficients can be used as features to represent the signal ([https://stackoverflow.com/questions/3694918/how-to-extract-frequency-associated-with-fft-values-in-python](https://stackoverflow.com/questions/3694918/how-to-extract-frequency-associated-with-fft-values-in-python)) 
+  - Try to link with Vocal Chords
 
 - BTP report - TBD on Overleaf, writeup on Grammarly
   - Completed the Research Paper matter writeup
