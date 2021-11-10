@@ -67,7 +67,7 @@ ONGOING PLAN - OCT 2021:
   - Documentation of App Developements -- DONE (atm)
   - Documentation of comparison of waves -- DONE (atm)
   - Documentation of comparison of COPD and COVID audio recordings -- TBD
-  - Documentation of comparison of frequencies of COVID and Non-covid audio recordings -- TBD
+  - Documentation of comparison of frequencies of COVID and Non-covid audio recordings -- TBD -- Not to be included in Report
   - Arranging all the documentations in one place -- WORD -- Ongoing
 
 - Research and Datasets on Different diseases -- Compare with COVID (MFCC's) (Look For boxplots in plotly -- same research as COVID multi waves)
