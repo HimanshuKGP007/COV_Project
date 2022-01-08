@@ -115,3 +115,9 @@ COUGHVID:
 - https://github.com/clelf/CS-433-ML_Project2_COUGHVID 
 
 Source: COVID-19 cough audio classification analysis using COUGHVID dataset by Orlandic et al.. (https://www.nature.com/articles/s41597-021-00937-4.pdf)
+
+New Data Sources: 
+
+- [COPD and COVID Comparison Numerical datasets](https://www.kaggle.com/himanshu007121/copd-covid-comparison-datasets)
+- [COVID Both Waves Numerical Data](https://www.kaggle.com/himanshu007121/wave-comparison-data)
+- [Cough Detection Data](https://www.kaggle.com/himanshu007121/coughdetectiondata)
