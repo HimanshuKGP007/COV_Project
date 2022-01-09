@@ -1,0 +1,16 @@
+{
+    "a": 20,
+    "cold": true,
+    "cough": true,
+    "covid_status": "recovered_full",
+    "dT": "web",
+    "ep": "y",
+    "fV": 2,
+    "ftg": true,
+    "g": "female",
+    "l_c": "India",
+    "l_l": "Mangalore",
+    "l_s": "Karnataka",
+    "rU": "n",
+    "um": "y"
+}

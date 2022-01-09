@@ -1,0 +1,19 @@
+{
+    "a": 65,
+    "bd": true,
+    "cough": true,
+    "covid_status": "positive_moderate",
+    "dT": "web",
+    "ep": "y",
+    "fV": 2,
+    "fever": true,
+    "ftg": true,
+    "g": "male",
+    "l_c": "India",
+    "l_l": "Manipal ",
+    "l_s": "Karnataka",
+    "mp": true,
+    "rU": "y",
+    "st": true,
+    "um": "y"
+}

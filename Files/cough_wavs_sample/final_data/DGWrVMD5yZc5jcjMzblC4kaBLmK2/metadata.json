@@ -1,0 +1,19 @@
+{
+    "a": 38,
+    "cold": true,
+    "cough": true,
+    "covid_status": "positive_mild",
+    "dT": "web",
+    "ep": "y",
+    "fV": 2,
+    "fever": true,
+    "ftg": true,
+    "g": "male",
+    "l_c": "India",
+    "l_l": "Kachchh",
+    "l_s": "Gujarat",
+    "mp": true,
+    "rU": "n",
+    "st": true,
+    "um": "n"
+}

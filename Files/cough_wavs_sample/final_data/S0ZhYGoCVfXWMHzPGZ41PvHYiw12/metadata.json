@@ -1,0 +1,17 @@
+{
+    "a": 39,
+    "bd": true,
+    "cold": true,
+    "cough": true,
+    "covid_status": "positive_mild",
+    "dT": "web",
+    "ep": "n",
+    "fV": 2,
+    "fever": true,
+    "ftg": true,
+    "g": "male",
+    "l_c": "India",
+    "l_s": "Karnataka",
+    "rU": "n",
+    "um": "n"
+}

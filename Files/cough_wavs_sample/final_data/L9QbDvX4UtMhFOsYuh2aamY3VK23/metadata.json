@@ -1,0 +1,17 @@
+{
+    "a": 17,
+    "cold": true,
+    "cough": true,
+    "covid_status": "positive_mild",
+    "dT": "web",
+    "ep": "y",
+    "fV": 2,
+    "fever": true,
+    "g": "male",
+    "l_c": "India",
+    "l_l": "Paschim Bardhhaman",
+    "l_s": "West Bengal",
+    "mp": true,
+    "rU": "y",
+    "um": "n"
+}
