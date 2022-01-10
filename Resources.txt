@@ -126,3 +126,4 @@ IQR aggregation for each frequency bin
 - https://www.youtube.com/watch?v=MPuT-nERZCA 
 - https://stackoverflow.com/questions/67214703/pandas-groupby-and-then-retrieving-iqr
 - Application of groupby with transform
+- https://pbpython.com/groupby-agg.html
