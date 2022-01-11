@@ -131,3 +131,7 @@ Breakthrough -- VVI
 - https://stackoverflow.com/questions/17578115/pass-percentiles-to-pandas-agg-function/20233047 
 - https://www.geeksforgeeks.org/combine-two-pandas-series-into-a-dataframe/
 - https://www.absentdata.com/pandas/pandas-cut-continuous-to-categorical/
+
+Amplitude Unit -- Relative 
+- https://stackoverflow.com/questions/61698261/amplitude-units-in-fft
+- https://klyshko.github.io/teaching/2019-02-22-teaching
