@@ -127,3 +127,7 @@ IQR aggregation for each frequency bin
 - https://stackoverflow.com/questions/67214703/pandas-groupby-and-then-retrieving-iqr
 - Application of groupby with transform
 - https://pbpython.com/groupby-agg.html
+Breakthrough -- VVI
+- https://stackoverflow.com/questions/17578115/pass-percentiles-to-pandas-agg-function/20233047 
+- https://www.geeksforgeeks.org/combine-two-pandas-series-into-a-dataframe/
+- https://www.absentdata.com/pandas/pandas-cut-continuous-to-categorical/
