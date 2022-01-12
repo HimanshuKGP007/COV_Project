@@ -27,6 +27,14 @@ warnings.simplefilter('ignore')
 
 # Testing Files present at Files\cough_wavs_sample
 
+def custom_fft(y, fs):
+    T = 1.0 / fs
+    N = y.shape[0]
+    yf = fft(y)
+    xf = np.linspace(0.0, 1.0/(2.0*T), N//2)
+    vals = 2.0/N * np.abs(yf[0:N//2])  
+    return xf, vals
+
 # https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files --> Answer 2
 def fft_new(file):
     fs_rate, signal = wavfile.read(file)
@@ -57,86 +65,59 @@ def fft_new(file):
     freq = freqs_side
     return freq, mag
 
-#file = r'C:\Users\DELL\COV_Project\Files\cough_wavs_sample\cleaned_data\Positive\1192_Positive_male_28.wav'
-#freq, mag = fft_new(file)
-
-def fft_plot(file):
-    #file = '../input/covid-cough-wavs/cleaned_data/Positive/1192_Positive_male_28.wav'
-    signal, sr = librosa.load(file)
-    X = np.fft.fft(signal)
-    X_mag = np.absolute(X)
-    
-    plt.figure(figsize=(18, 5))
-    
-    f = np.linspace(0, sr, len(X_mag))
-    f_ratio = 0.05
-    f_bins = int(len(X_mag)*f_ratio)  
-    
-    plt.plot(f[:f_bins], X_mag[:f_bins])
-    plt.xlabel('Frequency (Hz)')
-    source = '../input/covid-cough-wavs/cleaned_data/Positive'
-    if source in file:
-        name = file.replace(source + '/','')
-    plt.title(name)
-    return f[:f_bins], X_mag[:f_bins]
-
+file = r'C:\Users\DELL\COV_Project\Files\cough_wavs_sample\cleaned_data\Positive\1192_Positive_male_28.wav'
+freq, mag = fft_new(file)
 
 def createSeries (series_list):
     series_list = pd.Series(series_list)  
     return series_list
 
-def freq_bin_vs_amp(frequency_list, amplitude_list):
-    frequencies = createSeries(frequency_list) 
-    Amplitude = createSeries(amplitude_list)
-    
-    # create a dictonary
+def freq_amp(freq, mag):
+    frequencies = createSeries(freq) 
+    Amplitude = createSeries(mag)
     data = {"frequencies": frequencies,
             "Amplitude": Amplitude}
-    df = pd.concat(data, axis = 1)
-    #Create Bins
-    squares = []
-    # for i in range(11):
-    #     squares.append(i * 100)
+    df1 = pd.concat(data, axis = 1)
+    df2 = df1[df1['frequencies']<1000]
+    return df2
+
+def percentile(n):
+    def percentile_(x):
+        return np.percentile(x, n)
+    percentile_.__name__ = 'percentile_%s' % n
+    return percentile_
+
+def raw_to_agg(df2):
+    squares1 = []
     for i in range(51):
-        squares.append(i * 20)
-    bins = squares
-    df['binned_freq'] = pd.cut(df['frequencies'], bins)
-    # Extract Maximum amplitude for that Bin
-    # ---------------------------------------------------------------------------------------------
-    # PROBLEM
-    # ---------------------------------------------------------------------------------------------
-    df = df[df['Amplitude']==df.groupby('binned_freq')['Amplitude'].transform('max')]
-    df = df[['Amplitude', 'binned_freq']].reset_index(drop=True)
-    return df, df['Amplitude'].tolist()
+        squares1.append(i * 20)
 
-#Idea --> Append df['Amplitude'] to another dataframe
-
-cols = []
-string = 'string'
-for i in range(1000):
-    if i % 20 == 0:
-        string ='(' + str(i) + ',' + str(i+20) + ']'
+    cols = []
+    string = 'string'
+    for i in range(1000):
+        if i % 20 == 0:
+           string ='(' + str(i) + ',' + str(i+20) + ']'
         #Append in a list
         cols.append(string)
 
-#Create Dataframe for appending df['Amplitude']
-final_data = pd.DataFrame(columns=cols)
-final_data_length = len(final_data)
-final_data["gender"] = ""
-
-#CLearly define what our data is --> final_data
+    a = pd.cut(df2.frequencies,bins = squares1, labels = cols)
+    # a contains the respective bins for all frequency values in data
+    freq = a
+    amp = df2.Amplitude
+    data = {"freq": freq, "amp": amp}
+    df3 = pd.concat(data, axis = 1)
+    final_data_single_rec = df3.groupby(['freq']).agg({'amp': [percentile(80)]})
+    final_data_single_rec.columns = ['_'.join(col) for col in final_data_single_rec.columns.values]
+    amp = ***
+    return amp
 
 def final_function(file, data):
     freq, mag = fft_new(file)
-    sample, amp = freq_bin_vs_amp(freq, mag)
-    #data = append_row(amp, data)
+    df2 = freq_amp(freq, mag)
+    amp = raw_to_agg(df2)
     to_append = amp
     gender = file[-13:-7]
     to_append.append(gender)
     df_length = len(data)
     data.loc[df_length] = to_append
-    #data.iloc[-1:,-1:] = 
     return data
-
-# This data would return the bucket wise max amplitude along with the gender 
-
