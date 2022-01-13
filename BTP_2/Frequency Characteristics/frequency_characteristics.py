@@ -102,13 +102,20 @@ def raw_to_agg(df2):
 
     a = pd.cut(df2.frequencies,bins = squares1, labels = cols)
     # a contains the respective bins for all frequency values in data
+    return a
+
+def a_to_amp(a, df2):
     freq = a
     amp = df2.Amplitude
     data = {"freq": freq, "amp": amp}
     df3 = pd.concat(data, axis = 1)
     final_data_single_rec = df3.groupby(['freq']).agg({'amp': [percentile(80)]})
     final_data_single_rec.columns = ['_'.join(col) for col in final_data_single_rec.columns.values]
-    amp = ***
+    mn = final_data_single_rec.to_string(index=False, header= False)
+    my_list = mn.split("\n")
+    a1 = my_list
+    b =  [float(float(s)) for s in a1]
+    amp = b
     return amp
 
 def final_function(file, data):
