@@ -118,13 +118,29 @@ def a_to_amp(a, df2):
     amp = b
     return amp
 
+def gen_add(amp, file):
+    gender = file[-13:-7]
+    gen = 0
+    if gender == 'e_male':
+        gen = 1
+    gen = float(gen)
+    amp.append(gen)
+    return amp
+
 def final_function(file, data):
     freq, mag = fft_new(file)
     df2 = freq_amp(freq, mag)
     amp = raw_to_agg(df2)
-    to_append = amp
-    gender = file[-13:-7]
-    to_append.append(gender)
+    amp = a_to_amp(amp, df2)
+    #print(amp)
+    amp = gen_add(amp, file)
     df_length = len(data)
-    data.loc[df_length] = to_append
+    data.loc[df_length]=pd.DataFrame(amp).iloc[df_length]
+    #print(df_length)
+    data.loc[df_length, 'gender'] = file[-13:-7]
+    data.loc[df_length] = amp
     return data
+
+#Test
+# file =r'C:\Users\DELL\COV_Project\Files\cough_wavs_sample\cleaned_dataPositive\1192_Positive_male_28.wav'
+# final_data = final_function(file, final_data)
