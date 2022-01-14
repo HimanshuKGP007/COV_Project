@@ -120,11 +120,11 @@ def a_to_amp(a, df2):
 
 def gen_add(amp, file):
     gender = file[-13:-7]
-    gen = 0
-    if gender == 'e_male':
-        gen = 1
-    gen = float(gen)
-    amp.append(gen)
+    # gen = 0
+    # if gender == 'e_male':
+    #     gen = 1
+    # gen = float(gen)
+    amp.append(gender)
     return amp
 
 def final_function(file, data):
