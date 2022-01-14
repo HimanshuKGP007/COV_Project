@@ -137,7 +137,6 @@ def final_function(file, data):
     df_length = len(data)
     data.loc[df_length]=pd.DataFrame(amp).iloc[df_length]
     #print(df_length)
-    data.loc[df_length, 'gender'] = file[-13:-7]
     data.loc[df_length] = amp
     return data
 
