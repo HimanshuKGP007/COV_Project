@@ -135,3 +135,9 @@ Breakthrough -- VVI
 Amplitude Unit -- Relative 
 - https://stackoverflow.com/questions/61698261/amplitude-units-in-fft
 - https://klyshko.github.io/teaching/2019-02-22-teaching
+
+CoughDetection
+- https://github.com/Keerthiraj-Nagaraj/cough-detection-with-transfer-learning
+- https://github.com/spl-icsforth/CoughDetection
+- https://github.com/sundar19/Live-Cough-Sneeze-detection-with-mic
+- https://github.com/pafvell/cough-detection
