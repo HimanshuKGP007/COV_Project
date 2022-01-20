@@ -141,3 +141,7 @@ CoughDetection
 - https://github.com/spl-icsforth/CoughDetection
 - https://github.com/sundar19/Live-Cough-Sneeze-detection-with-mic
 - https://github.com/pafvell/cough-detection
+
+ --> Image classification 
+ - https://www.kaggle.com/arbazkhan971/image-classification-using-cnn-94-accuracy
+ - https://www.kaggle.com/himanshu007121/urbansound8k-classification -- Currently in use
