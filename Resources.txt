@@ -145,4 +145,5 @@ CoughDetection
  --> Image classification 
  - https://www.kaggle.com/arbazkhan971/image-classification-using-cnn-94-accuracy
  - https://www.kaggle.com/himanshu007121/urbansound8k-classification -- Currently in use
- - https://www.kaggle.com/himanshu007121/wav-cough-classification -- workspace
+ - https://www.kaggle.com/himanshu007121/wav-cough-classification/notebook -- wav to numerical points
+ -
