@@ -142,9 +142,10 @@ CoughDetection
 - https://github.com/sundar19/Live-Cough-Sneeze-detection-with-mic
 - https://github.com/pafvell/cough-detection
 
- --> Image classification 
+ --> Cough / Cough Image classification 
  - https://www.kaggle.com/arbazkhan971/image-classification-using-cnn-94-accuracy
  - https://www.kaggle.com/himanshu007121/urbansound8k-classification -- Currently in use
  - https://www.kaggle.com/himanshu007121/wav-cough-classification/notebook -- wav to numerical points
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classification -- pickel file of numerical data points
- -
+ - https://www.kaggle.com/c/rfcx-species-audio-detection/discussion/197737#1082388 -- Audio Competitions --> Reference
+ - Idea: Audio Data Augmentation
