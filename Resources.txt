@@ -154,6 +154,7 @@ CoughDetection
  PLAN 
   - Plan to use pycaret for best NN model
   - Reduce Overfitting on the validation dataset
+    - Use Data Augmentation for resolve class imbalance issues 
   - Get high recall for both Classes
 
 
