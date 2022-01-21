@@ -131,6 +131,7 @@ Breakthrough -- VVI
 - https://stackoverflow.com/questions/17578115/pass-percentiles-to-pandas-agg-function/20233047 
 - https://www.geeksforgeeks.org/combine-two-pandas-series-into-a-dataframe/
 - https://www.absentdata.com/pandas/pandas-cut-continuous-to-categorical/
+- https://www.kaggle.com/himanshu007121/frequency-comparison-data-analysis -- DATA ANALYSIS
 
 Amplitude Unit -- Relative 
 - https://stackoverflow.com/questions/61698261/amplitude-units-in-fft
@@ -148,6 +149,7 @@ CoughDetection
  - https://www.kaggle.com/himanshu007121/testing-spectral-comparison-techniques 
  - https://www.kaggle.com/himanshu007121/wav-cough-classification/notebook -- wav to numerical points
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classification -- pickel file of numerical data points
+ - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classif --CNN trained on the pickel file
  - https://www.kaggle.com/c/rfcx-species-audio-detection/discussion/197737#1082388 -- Audio Competitions --> Reference
  - Idea: Audio Data Augmentation
 
