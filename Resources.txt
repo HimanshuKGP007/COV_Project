@@ -150,6 +150,13 @@ CoughDetection
  - https://www.kaggle.com/himanshu007121/wav-cough-classification/notebook -- wav to numerical points
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classification -- pickel file of numerical data points
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classif --CNN trained on the pickel file
+ 
+ PLAN 
+  - Plan to use pycaret for best NN model
+  - Reduce Overfitting on the validation dataset
+  - Get high recall for both Classes
+
+
  - https://www.kaggle.com/c/rfcx-species-audio-detection/discussion/197737#1082388 -- Audio Competitions --> Reference
  - Idea: Audio Data Augmentation
 
