@@ -152,7 +152,8 @@ CoughDetection
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classif --CNN trained on the pickel file
  
  PLAN 
-  - Plan to use pycaret for best NN model
+  - Plan to use pycaret for best NN model --> https://towardsdatascience.com/pycaret-skorch-build-pytorch-neural-networks-using-minimal-code-57079e197f33
+  https://www.kaggle.com/kabure/titanic-eda-model-pipeline-keras-nn?scriptVersionId=18546554&cellId=83 
   - Reduce Overfitting on the validation dataset
     - Use Data Augmentation for resolve class imbalance issues 
   - Get high recall for both Classes
