@@ -131,7 +131,8 @@ Breakthrough -- VVI
 - https://stackoverflow.com/questions/17578115/pass-percentiles-to-pandas-agg-function/20233047 
 - https://www.geeksforgeeks.org/combine-two-pandas-series-into-a-dataframe/
 - https://www.absentdata.com/pandas/pandas-cut-continuous-to-categorical/
-- https://www.kaggle.com/himanshu007121/frequency-comparison-data-analysis -- DATA ANALYSIS
+
+- https://www.kaggle.com/himanshu007121/frequency-comparison-data-analysis -- DATA ANALYSIS -- V.V Important
 
 Amplitude Unit -- Relative 
 - https://stackoverflow.com/questions/61698261/amplitude-units-in-fft
@@ -152,8 +153,9 @@ CoughDetection
  - https://www.kaggle.com/himanshu007121/pickle-wav-cough-classif --CNN trained on the pickel file
  
  PLAN 
-  - Plan to use pycaret for best NN model --> https://towardsdatascience.com/pycaret-skorch-build-pytorch-neural-networks-using-minimal-code-57079e197f33
-  https://www.kaggle.com/kabure/titanic-eda-model-pipeline-keras-nn?scriptVersionId=18546554&cellId=83 
+  - Plan to use pycaret for best NN model --> 
+    - https://towardsdatascience.com/pycaret-skorch-build-pytorch-neural-networks-using-minimal-code-57079e197f33
+    - https://www.kaggle.com/kabure/titanic-eda-model-pipeline-keras-nn?scriptVersionId=18546554&cellId=83 
   - Reduce Overfitting on the validation dataset
     - Use Data Augmentation for resolve class imbalance issues 
   - Get high recall for both Classes
